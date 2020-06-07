@@ -24,7 +24,7 @@ process.env.VAPID_PRIVATE_KEY = vapidKeys.privateKey;
 
 // add the VAPID keys to web push
 webPush.setVapidDetails(
-    'http://web.docker.localhost/',
+    `malito:${process.env.EMAIL}`,
     process.env.VAPID_PUBLIC_KEY,
     process.env.VAPID_PRIVATE_KEY
   );
