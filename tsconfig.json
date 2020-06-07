@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "esnext",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      // Process & infer types from .js files.
+      "allowJs": true,
+      // Don't emit; allow Babel to transform files.
+      "noEmit": true,
+      // Enable strictest settings like strictNullChecks & noImplicitAny.
+      "strict": true,
+      // Disallow features that require cross-file information for emit.
+      "isolatedModules": true,
+      "sourceMap": true,
+      "outDir": "lib",
+      "baseUrl": ".",
+      "paths": {
+        "config/*": ["src/config/*"],
+        "public/*": ["src/public/"],
+        "utils/*": ["./src/util/*"],
+        "service-modules/*": ["src/modules/*"],
+        "helpers/*": ["src/helpers/*"],
+        "quizModule/*": ["src/modules/quiz/*"],
+        "answer-module/*": ["./src/modules/answer/*"],
+        "answer-sheet-module/*": ["src/modules/answer-sheet/*"],
+        "questionModule/*": ["src/modules/question/*"],
+        "*": ["node_modules/*", "src/types/*"]
+      }
+    },
+    "include": ["src/**/*", "types/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
+  

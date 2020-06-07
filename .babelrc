@@ -1,0 +1,29 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ],
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      [
+        "module-resolver",
+        {
+          "cwd": "babelrc",
+          "root": ["./src"],
+          "extensions": [".js", ".jsx", ".es", ".es6", ".mjs", ".ts"],
+          "alias": {
+            "utils": "./src/util/",
+            "service-modules": "./src/modules/"
+          }
+        }
+      ],
+      "@babel/plugin-proposal-optional-chaining"
+    ]
+  }
+  
